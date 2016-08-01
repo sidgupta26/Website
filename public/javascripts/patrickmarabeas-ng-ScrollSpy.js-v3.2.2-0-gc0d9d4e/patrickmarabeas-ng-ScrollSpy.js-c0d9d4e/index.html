@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html data-ng-app="demo">
+<head>
+  <title>AngularJS ng-ScrollSpy.js</title>
+
+  <script type="text/javascript" src="demo/scripts/angular.min.js"></script>
+  <script type="text/javascript" src="demo/scripts/demo.js"></script>
+  <script type="text/javascript" src="src/ng-ScrollSpy.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="demo/styles/main.css"/>
+
+</head>
+<body>
+
+<header id="top">
+  <a href="https://github.com/patrickmarabeas/ng-ScrollSpy.js">View it on GitHub</a>
+  <a href="https://github.com/patrickmarabeas/ng-ScrollSpy.js/zipball/master">Download ZIP</a>
+  <a href="https://github.com/patrickmarabeas/ng-ScrollSpy.js/tarball/master">Download TAR</a>
+  <a href="https://github.com/patrickmarabeas">@patrickmarabeas</a>
+</header>
+
+<nav>
+  <span class="item" data-scrollspy-listen="code">ng-ScrollSpy.js</span>
+  <span class="item" data-scrollspy-listen="hongkong">Hong Kong</span>
+  <span class="item" data-scrollspy-listen="newyork">New York</span>
+  <span class="item" data-scrollspy-listen="london">London</span>
+  <span class="item" data-scrollspy-listen="sydney">Sydney</span>
+</nav>
+
+<section id="code" data-scrollspy-broadcast>
+
+  <div class="wrapper">
+
+    <p>Grab it with Bower:</p>
+
+    <code>bower install ng-ScrollSpy.js</code>
+
+    <p>Include it in your AngularJS application</p>
+
+    <code>var myApp = angular.module( 'myApp', [ 'ngScrollSpy' ] );</code>
+
+    <p>The following line is your navigation item element which will be given an `active` class when the specified ID is
+      spied upon. It is element type unspecific. You can listen for multiple elements with pipe separation.</p>
+
+    <code>&lt;span data-scrollspy-listen="myID"&gt;myID&lt;/span&gt;</code>
+    <code>&lt;span data-scrollspy-listen="myID|another"&gt;multiple&lt;/span&gt;</code>
+
+    <p>This is the element you wish to spy on. Offset can be set specifically on elements as well.</p>
+
+    <code>&lt;section id="myID" data-scrollspy-broadcast data-scrollspy-offset="100"&gt;&lt;/section&gt;</code>
+
+    <p>See readme.md for more options available</p>
+
+    <p>NOTE: this AngularJS module is simply a scrollspy, anchor linking / smooth scrolling is another modules concern.</p>
+
+  </div>
+
+</section>
+<section id="hongkong" data-scrollspy-broadcast data-expand></section>
+<section id="newyork" data-scrollspy-broadcast data-expand></section>
+<section id="london" data-scrollspy-broadcast data-expand></section>
+<section id="sydney" data-scrollspy-broadcast data-expand></section>
+
+</body>
+</html>

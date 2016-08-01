@@ -1,0 +1,59 @@
+<div ng-controller="contactController">
+    <h2>
+        Contact Me
+    </h2>
+
+
+    <div class="alert alert-success alert-dismissible" ng-show = "success" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Well Done!</strong> You successfully sent message to Siddharth Gupta.
+    </div>
+
+    <div class="alert alert-danger alert-dismissible" ng-show = "!success" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+    </div>
+
+    <div class="form-container" >
+        <form name = "contactMeForm" method="post" novalidate>
+            <div class="col-md-12">
+                <div class="form-group col-md-3">
+                    <input type="text" id="firstName" name="firstName" class="form-control" ng-model="message.user.firstName" required
+                           placeholder="First Name">
+                    <span class="help-block"
+                          ng-show="contactMeForm.firstName.$error.required">Required</span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group col-md-3">
+                    <input type="text" id="lastName" class="form-control" ng-model="message.user.lastName" required
+                           placeholder="Last Name">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group col-md-3">
+                    <input type="text" id="phoneNumber" class="form-control" ng-model="message.user.phoneNumber" required
+                           placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group col-md-3">
+                    <input type="text" id="message" class="form-control" ng-model="message.messageText" required
+                           placeholder="Message">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group col-md-3">
+                    {{user.firstName}}
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary" ng-click="sendMessage()">Save</button>
+                <button class="btn btn-danger" ng-click="deleteUser()">Delete</button>
+            </div>
+        </form>
+    </div>
+</div>

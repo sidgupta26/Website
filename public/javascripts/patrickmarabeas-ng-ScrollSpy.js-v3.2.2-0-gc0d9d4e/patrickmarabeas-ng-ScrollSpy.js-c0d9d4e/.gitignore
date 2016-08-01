@@ -1,0 +1,4 @@
+.idea
+build/.module-cache
+lib/
+node_modules/
